@@ -21,7 +21,7 @@
   
         var i, tweens = [];
         
-     
+           TWEEN.start();
         
         var data = JSON.parse(data);
         $(el).data('globedata', data);
