@@ -67,7 +67,7 @@ DAT.Globe = function(container, colorFn) {
   };
 
   var camera, scene, renderer, w, h;
-  var mesh, atmosphere, point;
+  var vector, mesh, atmosphere, point;
 
   var overRenderer;
 
