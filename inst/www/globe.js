@@ -94,7 +94,7 @@ DAT.Globe = function(container, colorFn) {
     w = container.offsetWidth || window.innerWidth;
     h = container.offsetHeight || window.innerHeight;
 
-    camera = new THREE.PerspectiveCamera(30, w / h, 1, 10000);
+    camera = new THREE.PerspectiveCamera(300, w / h, 1, 10000);
     camera.position.z = distance;
 
     scene = new THREE.Scene();
