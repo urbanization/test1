@@ -364,9 +364,11 @@ DAT.Globe = function(container, colorFn) {
     camera.position.y = distance * Math.sin(rotation.y);
     camera.position.z = distance * Math.cos(rotation.x) * Math.cos(rotation.y);
 
-    camera.lookAt(mesh.position);
+    vector.copy(camera.position);
 
+    renderer.clear();
     renderer.render(scene, camera);
+    renderer.render(sceneAtmosphere, camera);
   }
 
   init();
