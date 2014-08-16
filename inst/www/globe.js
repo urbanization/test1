@@ -263,7 +263,9 @@ DAT.Globe = function(container, colorFn) {
     point.position.x = 200 * Math.sin(phi) * Math.cos(theta);
     point.position.y = 200 * Math.cos(phi);
     point.position.z = 200 * Math.sin(phi) * Math.sin(theta);
-
+    
+    
+    vector.copy(point.position); 
     point.lookAt(mesh.position);
 
     point.scale.z = Math.max( size, 0.1 ); // avoid non-invertible matrix
@@ -370,7 +372,7 @@ DAT.Globe = function(container, colorFn) {
     camera.position.z = distance * Math.cos(rotation.x) * Math.cos(rotation.y);
 
     vector.copy(camera.position);
-    renderer.clear();
+    
     camera.lookAt(mesh.position);
     renderer.render(scene, camera);
 
