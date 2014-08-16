@@ -78,7 +78,7 @@ DAT.Globe = function(container, colorFn) {
 
   var mouse = { x: 0, y: 0 }, mouseOnDown = { x: 0, y: 0 };
   var rotation = { x: 0, y: 0 },
-      target = { x: 0, y: 0 },
+      target = { x: 90, y: 0 },
       targetOnDown = { x: 0, y: 0 };
 
   var distance = 800, distanceTarget = 800;
@@ -97,7 +97,12 @@ DAT.Globe = function(container, colorFn) {
     camera = new THREE.PerspectiveCamera(30, w / h, 1, 10000);
     camera.position.z = distance;
 
+
+    
+        vector = new THREE.Vector3();
+
     scene = new THREE.Scene();
+    sceneAtmosphere = new THREE.Scene();
 
     var geometry = new THREE.SphereGeometry(200, 40, 30);
 
@@ -364,9 +369,12 @@ DAT.Globe = function(container, colorFn) {
     camera.position.y = distance * Math.sin(rotation.y);
     camera.position.z = distance * Math.cos(rotation.x) * Math.cos(rotation.y);
 
+    vector.copy(camera.position);
 
-    camera.lookAt(mesh.position);
+    renderer.clear();
     renderer.render(scene, camera);
+    renderer.render(sceneAtmosphere, camera);
+    
   }
 
   init();
