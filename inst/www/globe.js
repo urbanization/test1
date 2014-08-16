@@ -371,7 +371,7 @@ DAT.Globe = function(container, colorFn) {
 
     vector.copy(camera.position);
     renderer.render(scene, camera);
-    renderer.render(sceneAtmosphere, camera);
+
     
   }
 
