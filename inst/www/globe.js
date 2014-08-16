@@ -99,7 +99,7 @@ DAT.Globe = function(container, colorFn) {
 
 
     
-        vector = new THREE.Vector3();
+        
 
     scene = new THREE.Scene();
     sceneAtmosphere = new THREE.Scene();
@@ -377,6 +377,7 @@ DAT.Globe = function(container, colorFn) {
     
   }
 
+  vector = new THREE.Vector3();
   init();
   this.animate = animate;
 
