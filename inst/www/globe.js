@@ -78,7 +78,7 @@ DAT.Globe = function(container, colorFn) {
 
   var mouse = { x: 0, y: 0 }, mouseOnDown = { x: 0, y: 0 };
   var rotation = { x: 0, y: 0 },
-      target = { x: Math.PI, y: 0 },
+      target = { x: Math.PI/3, y: 0 },
       targetOnDown = { x: 0, y: 0 };
 
   var distance = 800, distanceTarget = 800;
@@ -370,7 +370,7 @@ DAT.Globe = function(container, colorFn) {
     camera.position.z = distance * Math.cos(rotation.x) * Math.cos(rotation.y);
 
     vector.copy(camera.position);
-
+    renderer.clear();
     renderer.render(scene, camera);
     renderer.render(sceneAtmosphere, camera);
     
