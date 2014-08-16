@@ -78,7 +78,7 @@ DAT.Globe = function(container, colorFn) {
 
   var mouse = { x: 0, y: 0 }, mouseOnDown = { x: 0, y: 0 };
   var rotation = { x: 0, y: 0 },
-      target = { x: Math.PI/3, y: 0 },
+      target = { x: Math.PI/9, y: 0 },
       targetOnDown = { x: 0, y: 0 };
 
   var distance = 800, distanceTarget = 800;
