@@ -29,7 +29,7 @@
           globe.addData(data[1], {format: 'magnitude', name: data[0], animated: true});
         }
         globe.createPoints();
-        globe.time = 10;
+        globe.time = 0;
         globe.animate();
         document.body.style.backgroundImage = 'none'; // remove loading
       }
